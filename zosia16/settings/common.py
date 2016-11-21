@@ -65,6 +65,7 @@ INSTALLED_APPS = [
     'conferences.apps.ConferencesConfig',
     'users.apps.UsersConfig',
     'sponsors.apps.SponsorsConfig',
+    'lectures.apps.LecturesConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
