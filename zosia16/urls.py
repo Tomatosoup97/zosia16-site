@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'', include('conferences.urls')),
     url(r'^blog/', include('blog.urls')),
     url(r'^sponsors/', include('sponsors.urls')),
+    url(r'^lectures/', include('lectures.urls')),
 ]
