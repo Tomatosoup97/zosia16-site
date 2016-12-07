@@ -1,7 +1,8 @@
+from datetime import timedelta
+
 from django.db import models
 from django.utils.translation import ugettext as _
 from django.core.exceptions import ValidationError
-from datetime import timedelta
 
 from users.models import User, Organization
 from conferences.constants import SHIRT_SIZE_CHOICES, SHIRT_TYPES_CHOICES

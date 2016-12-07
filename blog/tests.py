@@ -6,6 +6,7 @@ from django.core.urlresolvers import reverse
 from .models import BlogPost
 from .forms import BlogPostForm
 
+
 User = get_user_model()
 
 

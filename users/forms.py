@@ -2,7 +2,6 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth.tokens import default_token_generator
 from django.contrib.auth.forms import UserCreationForm
 
-
 from .actions import SendActivationEmail
 from .models import User
 
@@ -23,6 +22,5 @@ class UserForm(UserCreationForm):
             token_generator=default_token_generator,
             use_https=request.is_secure(),
         )()
-
         self.user = user
         return user

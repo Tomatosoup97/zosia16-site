@@ -1,7 +1,9 @@
+from datetime import datetime, timedelta
+
 from django.test import TestCase
 from django.core.exceptions import ValidationError
+
 from conferences.models import Zosia, Place
-from datetime import datetime, timedelta
 
 
 def new_zosia(**kwargs):

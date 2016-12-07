@@ -3,8 +3,8 @@ from django.contrib.auth import login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.tokens import default_token_generator
 
-from . import forms
 from .actions import ActivateUser
+from . import forms
 
 
 @login_required

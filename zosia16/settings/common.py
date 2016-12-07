@@ -72,7 +72,7 @@ LOCAL_APPS = [
     'users',
     'sponsors',
 ]
-THIRD_PARTY_APPS  = [
+THIRD_PARTY_APPS = [
     'raven.contrib.django.raven_compat',
     'anymail',
 ]

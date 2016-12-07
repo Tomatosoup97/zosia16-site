@@ -1,12 +1,14 @@
+import os
+
 from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.contrib.auth import get_user_model
 from django.forms import ValidationError
 from django.shortcuts import reverse
 from django.test import TestCase
+
 from sponsors.models import Sponsor
 from sponsors.forms import SponsorForm
-import os
 
 
 User = get_user_model()

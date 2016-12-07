@@ -1,8 +1,8 @@
 from urllib.parse import urlencode
 
 from django.shortcuts import render
-from django.http import HttpResponse
 from django.conf import settings
+
 from .models import Zosia
 
 
