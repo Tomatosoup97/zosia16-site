@@ -21,15 +21,10 @@ Create virtualenv for python 3.5.
 * `pip install -r requirements`
 
 #### Dev settings
-Keep dev settings in `zosia16/settings/dev`. Add setting DJANGO_SETTINGS_MODULE to virtualenv:
+Add setting DJANGO_SETTINGS_MODULE to virtualenv:
 * `cat .env.sh >> env/bin/activate`
-```
-echo '
-from .common import *
-
-DEBUG = True
-' > zosia16/settings/dev.py
-```
+Copy example dev settings file
+* `cp zosia16/settings/dev.py.example zosia16/settings/dev.py`
 
 #### Spin up db
 Use docker:

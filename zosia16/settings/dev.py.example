@@ -1,0 +1,11 @@
+from .common import *
+
+
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
+
+SECRET_KEY = 'X'
+GAPI_KEY = 'X'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

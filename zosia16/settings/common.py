@@ -58,13 +58,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Application definition
 
-INSTALLED_APPS = [
-    'anymail',
-    'raven.contrib.django.raven_compat',
-    'blog.apps.BlogConfig',
-    'conferences.apps.ConferencesConfig',
-    'users.apps.UsersConfig',
-    'sponsors.apps.SponsorsConfig',
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -72,6 +66,19 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+LOCAL_APPS = [
+    'blog',
+    'conferences',
+    'users',
+    'sponsors',
+]
+THIRD_PARTY_APPS  = [
+    'raven.contrib.django.raven_compat',
+    'anymail',
+]
+
+INSTALLED_APPS = DJANGO_APPS + LOCAL_APPS + THIRD_PARTY_APPS
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
