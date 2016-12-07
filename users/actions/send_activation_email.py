@@ -8,7 +8,7 @@ EMAIL_TEMPLATE_NAME = 'users/signup_email.html'
 SUBJECT_TEMPLATE_NAME = 'users/signup_email_subject.txt'
 
 
-class SendActivationEmail:
+class SendActivationEmail(object):
     def __init__(self, user, site, token_generator, use_https=False):
         self.user = user
         self.site = site

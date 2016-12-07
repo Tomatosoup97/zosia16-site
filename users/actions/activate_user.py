@@ -4,7 +4,7 @@ from django.utils.http import urlsafe_base64_decode
 from users.models import User
 
 
-class ActivateUser:
+class ActivateUser(object):
     def __init__(self, token_generator, uidb64, token):
         self.token_generator = token_generator
         self.token = token
