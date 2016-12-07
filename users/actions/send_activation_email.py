@@ -1,4 +1,3 @@
-
 from django.template import loader
 from django.core.mail import EmailMultiAlternatives
 from django.utils.encoding import force_bytes
@@ -16,7 +15,7 @@ class SendActivationEmail:
         self.token_generator = token_generator
         self.use_https = use_https
 
-    def call(self):
+    def __call__(self):
         site_name = self.site.name
         domain = self.site.domain
         context = {
@@ -27,7 +26,6 @@ class SendActivationEmail:
             'uid': urlsafe_base64_encode(force_bytes(self.user.pk)),
             'user': self.user,
         }
-
         to_email = self.user.email
         # FIXME: proper email?
         from_email = None
@@ -38,5 +36,4 @@ class SendActivationEmail:
         body = loader.render_to_string(EMAIL_TEMPLATE_NAME, context)
 
         email_message = EmailMultiAlternatives(subject, body, from_email, [to_email])
-
         email_message.send()

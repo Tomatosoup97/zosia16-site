@@ -22,7 +22,7 @@ class UserForm(UserCreationForm):
             site=get_current_site(request),
             token_generator=default_token_generator,
             use_https=request.is_secure(),
-        ).call()
+        )()
 
         self.user = user
         return user
